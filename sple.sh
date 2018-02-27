@@ -3,9 +3,12 @@
 # by Rudy Affandi (2016)
 # Edited Aug 14, 2016
 
+# Updated by Richard Hawthorn
+# Feb 27th 2018
+
 # Todo
 # 1. Generate certificate
-# /usr/local/bin/certbot-auto certonly --webroot -w /srv/users/$username/apps/appname/public -d appdomain.tld
+# /usr/local/bin/certbot-auto certonly --webroot -w /var/sites/$appname/current/public -d appdomain.tld
 # 2. Generate appname.ssl.conf file
 # 3. Restart nginx
 # sudo service nginx-sp restart
@@ -84,7 +87,7 @@ echo ""
 echo "Please enter your app name:"
 read appname
 echo ""
-echo "Please enter the System User name for the app:"
+echo "Please enter the System User name for the app: (this is probably 'serverpilot')"
 read username
 echo ""
 echo "Please enter all the domain names and sub-domain names"
