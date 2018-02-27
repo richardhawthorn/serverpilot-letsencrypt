@@ -1,12 +1,14 @@
 # Serverpilot Let's Encrypt [![Ubuntu 14.04](https://img.shields.io/badge/Ubuntu-14.04-brightgreen.svg)]() [![Ubuntu 16.04](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)]()
 
+Forked and modified from lesaff's code, to account for different serverpilot folder structure
+
 Bash script to generate and install Let's Encrypt certificate for your websites on your free/paid ServerPilot account. Currently, the only easy way to add SSL to your ServerPilot-powered websites is by subscribing to the paid plan. 
 
 ## How to install
 - ssh to your server, `sudo su` to act as root
 - Copy `sple.sh` to your `/usr/local/bin` folder
   ```
-  cd /usr/local/bin && wget https://raw.githubusercontent.com/lesaff/serverpilot-letsencrypt/master/sple.sh
+  cd /usr/local/bin && wget https://raw.githubusercontent.com/richardhawthorn/serverpilot-letsencrypt/master/sple.sh
   ```
 - Run `sudo chmod +x sple.sh` to make it executable
 
@@ -42,7 +44,7 @@ Add the following to your crontab (`crontab -e`)
 ```
 
 ## Notes
-- This script assumes that you did not change your default ServerPilot installation folder
+- This script assumes that you keep your site files in /var/sites 
 - When entering your domain names, please list the primary root domain name first
 - To force HTTPS on your website, please follow [instructions here](https://serverpilot.io/community/articles/how-to-force-SSL-by-redirecting-http-to-https.html)
 - To redirect www to non-www or non-www to www on your website, please follow [instructions here](https://serverpilot.io/community/articles/how-to-redirect-to-a-different-domain.html)

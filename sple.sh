@@ -113,13 +113,13 @@ echo ""
 # 14.04 Trusty Tahr
 if [ $ubuntu == '14.04' ]
 then
-    /usr/local/bin/certbot-auto certonly --webroot -w /srv/users/$username/apps/$appname/public ${APPDOMAINLIST[@]}
+    /usr/local/bin/certbot-auto certonly --webroot -w /var/sites/$appname/current/public ${APPDOMAINLIST[@]}
 fi
 
 # 16.04 Xenial Xerus
 if [ $ubuntu == '16.04' ]
 then
-    letsencrypt certonly --webroot -w /srv/users/$username/apps/$appname/public ${APPDOMAINLIST[@]}
+    letsencrypt certonly --webroot -w /var/sites/$appname/current/public ${APPDOMAINLIST[@]}
 fi
 
 # Check the ACME configuration file for Nginx
